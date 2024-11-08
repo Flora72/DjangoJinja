@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Ruby Class {% endblock %}</title>
+</head>
+<body>
+
+<h1>Ruby Class</h1>
+<header>
+<nav>
+    <ul>
+        <li><a href="{% url 'my_home' %}">home</a></li>
+        <li><a href="{% url 'my_about' %}">about</a></li>
+        <li><a href="{% url 'my_contact' %}">contact</a></li>
+        <li><a href="{% url 'my_services' %}">services</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+    {% block content %}
+{#        Page specific content to go here#}
+    {% endblock %}
+</main>
+
+<footer>
+    <p>&copy; 2024 ruby class</p>
+</footer>
+</body>
+</html>
